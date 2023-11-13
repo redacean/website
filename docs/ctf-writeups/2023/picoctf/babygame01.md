@@ -1,19 +1,11 @@
 ---
-title: babygame01 Writeup - picoCTF 2023
-description: Writeup of the babygame01 challenge from picoCTF 2023.
-slug: picoctf-2023-babygame01
-draft: false
-keywords: [ ctf ]
-tags: [ binary exploitation, buffer overflow, ctf, writeup ]
-authors: redacean
-image: https://github.com/redacean/redacean.github.io/blob/main/static/img/picoctf.png
+title: babygame01 - picoCTF 2023
+sidebar_label: babygame01
+slug: babygame01
+tags: [ pwn, bof, ctf, writeup ]
 ---
 
 Hello fellow hackers! Today we are attempting the [babygame01](https://play.picoctf.org/practice/challenge/345?category=6&originalEvent=72&page=1) challenge from picoCTF 2023. This is a binary exploitation challenge that involves underflowing a buffer to modify a value on the stack to satisfy the condition of an if statement.
-
-<!--truncate-->
-
-![](/img/picoctf.png)
 
 ## Getting Started
 

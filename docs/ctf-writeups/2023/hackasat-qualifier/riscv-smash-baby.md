@@ -1,18 +1,11 @@
 ---
 title: RISC-V Smash Baby - Hack-A-Sat Qualifier 2023
-description: Writeup of the RISC-V Smash Baby  challenge from Hack-A-Sat Qualifier 2023.
-slug: hackasat-qualifier-2023-riscv-smash-baby
-keywords: [ ctf ]
-tags: [ pwn, hack-a-sat, buffer overflow, binary exploitation, shellcode, risc-v ]
-authors: redacean
-image: https://github.com/redacean/redacean.github.io/blob/main/static/img/hackasat-4.png
+sidebar_label: RISC-V Smash Baby
+slug: riscv-smash-baby
+tags: [ pwn, shellcode, risc-v ]
 ---
 
 Hello fellow hackers! Today we're attempting to solve the [RISC-V Smash Baby](https://github.com/cromulencellc/hackasat-qualifier-2023/tree/main/challenges/3_Pure_Pwnage/0_RISC-V-Smash-Baby) challenge from the *Pure Pwnage* category of [Hack-A-Sat](https://hackasat.com/) Qualifier 2023 CTF. The program first leaks the memory address where the flag is stored on the main function stack and stores the flag to disk. A function vulnerable to buffer overflow can be reached by satisfying some value checks. Hence, the flag can be obtained by uploading shellcode that will print the string located at the leaked memory address, or by spawning a shell and printing the flag.
-
-<!--truncate-->
-
-![Hack-A-Sat 4 Banner](/img/hackasat-4.png)
 
 ## Introduction
 

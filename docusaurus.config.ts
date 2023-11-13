@@ -3,27 +3,16 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Redacean',
+  tagline: '',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://www.redacean.com',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
+  organizationName: 'redacean',
+  projectName: 'website',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -35,17 +24,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/redacean/website/issues/new',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/redacean/website/issues/new',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -56,72 +41,98 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    //image: '',
     navbar: {
-      title: 'My Site',
+      title: 'Redacean',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Redacean Logo',
+        src: 'img/redacean-logo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
+	  to: '/blog',
+	  label: 'Blog',
+	  position: 'left'
+	},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          type: 'docSidebar',
+          sidebarId: 'notesSidebar',
+          position: 'left',
+          label: 'Notes',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'ctfWriteupsSidebar',
+          position: 'left',
+          label: 'CTF Writeups',
+        },
+        {
+	  to: '/about',
+	  label: 'About',
+	  position: 'right'
+	},
+	{
+	  href: 'https://github.com/redacean/website',
+	  label: 'GitHub',
+	  position: 'right',
+	},
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Socials',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/nbayle',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/redacean',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/users/1081617669649862666',
+            },
+	    {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/@redacean'
+            },
+            {
+              label: 'Twitch',
+              href: 'https://www.twitch.tv/redacean'
+            },
+            {
+              label: 'Reddit',
+              href: 'https://www.reddit.com/user/redacean'
             },
           ],
         },
         {
-          title: 'More',
+          title: 'CTF',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Writeups',
+              href: '/docs/ctf-writeups/',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'TryHackMe',
+              href: 'https://tryhackme.com/p/redacean',
+            },
+            {
+              label: 'HackTheBox Labs',
+              href: 'https://app.hackthebox.com/users/1430943',
+            },
+            {
+              label: 'CTF Time',
+              href: 'https://ctftime.org/user/168119',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Redacean. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,18 +1,11 @@
 ---
 title: ropfu - picoCTF 2022
-description: Writeup of the ropfu challenge from picoCTF 2022.
-slug: picoctf-2022-ropfu
-keywords: [ ctf ]
-tags: [ pwn, binary exploitation, rop, bof, overflow, ctf, writeup ]
-authors: redacean
-image: https://github.com/redacean/redacean.github.io/blob/main/static/img/picoctf.png
+sidebar_label: ropfu
+slug: ropfu
+tags: [ pwn, rop, bof, ctf, writeup ]
 ---
 
 Hello fellow hackers! Today we are attempting to solve the [ropfu](https://play.picoctf.org/practice/challenge/292?category=6&originalEvent=70&page=1) challenge from picoCTF 2022. This challenge consists in exploiting a buffer overflow vulnerability using Return Oriented Programming to spawn a shell.
-
-<!--truncate-->
-
-![](/img/picoctf.png)
 
 ## Getting Started
 
