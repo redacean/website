@@ -65,11 +65,11 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Redacean',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Redacean Logo',
         src: 'img/logo.svg',
       },
       items: [
