@@ -2,7 +2,7 @@
 title: heapdivers - Midnight Flag 2024 Quals
 slug: midnight-flag-2024-quals-heapdivers
 authors: redacean
-tags: [ midnight flag, heap, pwn, x86, use-after-free ]
+tags: [ midnight flag, heap, pwn, x86, use-after-free, linux ]
 image: /img/midnight-flag.png
 ---
 

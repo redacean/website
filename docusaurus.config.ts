@@ -88,6 +88,10 @@ const config: Config = {
         {
           title: 'Projects',
           items: [
+            {
+              label: 'i use arch btw',
+              to: '/docs/i-use-arch-btw',
+            },
           ],
         },
         {

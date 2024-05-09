@@ -2,7 +2,7 @@
 title: Snake - Midnight Flag 2024 Quals
 slug: midnight-flag-2024-quals-snake
 authors: redacean
-tags: [ midnight flag, pwn, x86-64 ]
+tags: [ midnight flag, pwn, x86-64, linux ]
 image: /img/midnight-flag.png
 ---
 
